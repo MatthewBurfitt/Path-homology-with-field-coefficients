@@ -29,6 +29,7 @@ import PathHomology as ph
 ## Examples
 
 Example computing each basis of the path chain complex of a multisquare digraph and gain after adding an additional edge across the multisquare.
+In the first case a basis in dimensions $`2`$ consists of two elements obtained as the difference of two $`2`$-paths around distinct directed squares, in the second the basis consists of all $`2`$-paths.
 
 ```python
 import PathHomology as ph
@@ -59,7 +60,20 @@ G.plot()
 plt.show()
 ```
 
-Example computing the path homology of a digraph whose edges lie on the one-skeleton of a tetrahedron.
+Example computing the path homology of a digraph $`G`$ whose edges lie on the one-skeleton of a tetrahedron.
+In particulare, we see that the path homology groups of $`G`$ are
+```math
+H_n(G;\mathbb{Q})
+\begin{cases} 
+        \mathbb{Q}
+        &
+        \text{if} \; n=0 \: \text{or} \: n=1
+        \\
+        0
+        &
+        \text{otherwise.}
+\end{cases}
+```
 
 ```python
 #Define digraph
