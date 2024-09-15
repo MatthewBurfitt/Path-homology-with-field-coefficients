@@ -63,7 +63,7 @@ plt.show()
 Example computing the path homology of a digraph $`G`$ whose edges lie on the one-skeleton of a tetrahedron.
 In particulare, we see that the path homology groups of $`G`$ are
 ```math
-H_n(G;\mathbb{Q})
+H_n(G;\mathbb{Q}) =
 \begin{cases} 
         \mathbb{Q}
         &
@@ -71,9 +71,10 @@ H_n(G;\mathbb{Q})
         \\
         0
         &
-        \text{otherwise.}
+        \text{otherwise}
 \end{cases}
 ```
+for each $`n \in \mathbb{N}`$.
 
 ```python
 #Define digraph
