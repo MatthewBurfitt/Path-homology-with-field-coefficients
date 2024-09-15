@@ -67,7 +67,7 @@ H_n(G;\mathbb{Q}) =
 \begin{cases} 
         \mathbb{Q}
         &
-        \text{if} \; n=0 \: \text{or} \: n=1
+        \text{if} \; n=0 \: \text{or} \: n=2
         \\
         0
         &
