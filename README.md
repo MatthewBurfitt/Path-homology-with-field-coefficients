@@ -83,7 +83,7 @@ plt.show()
 ```
 
 <p align="center" name="multisquare">
-      <img src="multisquare.png" alt="alt text" width="50%" height="50%">
+      <img src="multisquare.png">
 </p>
 
 Example computing the path homology of a digraph $`G`$ whose edges lie on the one-skeleton of a octahedron.
