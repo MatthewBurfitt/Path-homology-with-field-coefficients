@@ -19,18 +19,20 @@ The algorithm is independent of the method developed in the paper above and base
 
 # Methods
 
-Let $`K`$ be the field of rational numbers $`\mathbb{Q}`$ or finite field $`\mathbb{Z}/p\mathbb{Z}`$ for some prime number $`p`$.
-The path homology of a digraph $`G`$ is obtained in the fllowing steps.
+Let $`K`$ be the field of rational numbers $`\mathbb{Q}`$ or a finite field $`\mathbb{Z}/p\mathbb{Z}`$ for some prime number $`p`$.
+The path homology of a digraph $`G`$ is computed in the fllowing steps.
 
 1. Allowed paths are vertices of $`G`$ in dimension $`0`$, edges of $`G`$ in dimension $`1`$ and obtained in dimension $`n \geq 2`$ by concatenating any allowed paths in dimensions $`n-1`$ and an edge whose source vertex is the same as the final vertex in the $`(n-1)`$-path.
 
 2. A basis for the path chains $`C_*(G;K)`$ is obtained as the null space of the magnitude homology differential by identifying allowed paths with the basis of the diagonal magnitude chains.
 
-3. The boundary matrix of the path homology differential  $`M(\partial_n)`$ with respect to the computed basis of the path chains $`M(\partial_n)`$ is obtained directly form the basis of the path chains and the rank of the homology in dimension $`n \geq 0`$ is given by the standard formula
-```math
-\text{rank}(H_n(G;K) = \text{dim}(C_n(G;K)) - \text{rank}(M(\partial_n)) - \text{rank}(M(\partial_{n-1})).
-```
+3. The boundary matrix of the path homology differential  $`M(\partial_n)`$ with respect to the computed basis of the path chains and is obtained directly form the basis of the path chains.
 
+4. The rank of the homology in dimension $`n \geq 0`$ is given by the standard formula
+```math
+\text{rank}\left(H_n(G;K)\right) = \text{dim}\left(C_n(G;K)\right) - \text{rank}\left(M(\partial_n)\right) - \text{rank}\left(M(\partial_{n-1})\right)
+```
+where $`\text{rank}\left(M(\partial_{-1})\right) = 0`$.
 
 # Installation
 
