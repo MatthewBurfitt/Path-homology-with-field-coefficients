@@ -57,7 +57,7 @@ In the first case a basis in dimensions $`2`$ consists of two elements obtained 
 import PathHomology as ph
 import matplotlib.pyplot as plt
 
-#Define digraph
+#define digraph
 G = ph.Digraph(edges =
                [('u','v1'),('u','v2'),('u','v3'),
                 ('v1','w'),('v2','w'),('v3','w')])
@@ -82,7 +82,11 @@ G.plot()
 plt.show()
 ```
 
-Example computing the path homology of a digraph $`G`$ whose edges lie on the one-skeleton of a tetrahedron.
+<p align="center" name="multisquare">
+      <img src="multisquare.png" alt="alt text" width="50%" height="50%">
+</p>
+
+Example computing the path homology of a digraph $`G`$ whose edges lie on the one-skeleton of a octahedron.
 In particulare, we see that the path homology groups of $`G`$ are
 ```math
 H_n(G;\mathbb{Q}) =
@@ -99,7 +103,7 @@ H_n(G;\mathbb{Q}) =
 for each $`n \in \mathbb{N}`$.
 
 ```python
-#Define digraph
+#define digraph
 G = ph.Digraph(edges =
                [('u','v1'),('u','v2'),('u','v3'),('u','v4'),
                 ('v1','v3'),('v1','v4'),('v2','v3'),('v2','v4'),
@@ -113,6 +117,45 @@ ph.display_homology(homology)
 G.plot()
 plt.show()
 ```
+
+<p align="center" name="Euler2">
+      <img src="Euler2.png" alt="alt text" width="50%" height="50%">
+</p>
+
+This exmaple come form the paper: Xin Fu and Sergei Ivanov, [Path homology of digraphs without multisquares and its comparison
+with homology of spaces](https://arxiv.org/pdf/2407.17001) Section 5.4.
+The digraph $`G`$ has a homology of rank $`1`$ in dimension $`4`$ with coefficients $`Z/2Z`$ and homology of rank $`0`$ in dimension $`4`$ with coefficients $`Q`$ or $`Z/pZ`$ for $`p`$ a prime larger than $`2`$.
+In particular, as the homology ranks in other dimensions remain the same with the coefficients above, the Euler characteristic changes.
+
+```python
+#define digraph
+G = ph.Digraph(edges =
+               [('x0','x10'),('x0','x11'),('x0','x12'),
+                 ('x10','x20'),('x11','x21'),('x12','x22'),('x10','x21'),('x11','x22'),('x12','x20'),
+                 ('x20','x30'),('x21','x31'),('x22','x32'),('x20','x31'),('x21','x32'),('x22','x30'),
+                 ('x30','x4'),('x31','x4'),('x32','x4'),
+                 ('x10','x30'),('x11','x31'),('x12','x32'),('x10','x32'),('x11','x30'),('x12','x31')])
+
+#show chain rank vector with different coefficients
+print('path chain rank vector over Q:   ', G.chain_rank_vector(max_dim = 5, coefficients = 0))
+print('path chain rank vector over Z/2Z:', G.chain_rank_vector(max_dim = 5, coefficients = 2))
+print('path chain rank vector over Z/3Z:', G.chain_rank_vector(max_dim = 5, coefficients = 3))
+
+#display the digraph
+positions = {
+            'x0':(0,0),
+            'x10':(-1,1),'x11':(0,1),'x12':(1,1),
+            'x20':(-1,2),'x21':(0,2),'x22':(1,2),
+            'x30':(0,3),'x31':(1,3),'x32':(2,3),
+            'x4':(1,4)
+            }
+G.plot(positions = positions)
+plt.show()
+```
+
+<p align="center" name="octahedron">
+      <img src="octahedron.png" alt="alt text" width="50%" height="50%">
+</p>
 
 The next example corresponds to Example 6.1 form the a accompanying paper.
 With rational coefficients, the path boundary matrix of the digraph $`G`$ between dimension $`4`$ and dimension $`3`$ has entries of an arbitrary multiplicity $`t`$.
@@ -162,7 +205,7 @@ plt.show()
 ```
 
 <p align="center" name="multiplicity">
-      <img src="multiplicity.png" alt="alt text" width="30%" height="30%">
+      <img src="multiplicity.png" alt="alt text" width="50%" height="50%">
 </p>
 
 
