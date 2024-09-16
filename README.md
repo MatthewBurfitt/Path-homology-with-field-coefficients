@@ -1,4 +1,7 @@
-# Path-homology-with-field-coefficients
+title: "Path-homology-with-field-coefficients"
+
+header-includes:
+  - \usepackage{mathtools}
 
 # Table of Contents
 
