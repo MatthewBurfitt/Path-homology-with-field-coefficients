@@ -32,7 +32,7 @@ The path homology of a digraph $`G`$ is computed in the fllowing steps.
 ```math
 \text{rank}\left(H_n(G;K)\right) = \text{dim}\left(C_n(G;K)\right) - \text{rank}\left(M(\partial_n)\right) - \text{rank}\left(M(\partial_{n-1})\right)
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where $`\text{rank}\left(M(\partial_{-1})\right) = 0`$.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where $`\text{rank}\left(M(\partial_{-1})\right) = 0`$.
 
 # Installation
 
