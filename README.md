@@ -118,7 +118,7 @@ G.plot()
 plt.show()
 ```
 
-<p align="center" name="octahedron">
+<p align="center" name="octahedron" width="75%" height="75%">
       <img src="octahedron.png">
 </p>
 
@@ -154,7 +154,7 @@ plt.show()
 ```
 
 <p align="center" name="Euler2">
-      <img src="Euler2.png" alt="alt text" width="50%" height="50%">
+      <img src="Euler2.png" alt="alt text" width="100%" height="100%">
 </p>
 
 The next example corresponds to Example 6.1 form the a accompanying paper.
@@ -205,7 +205,7 @@ plt.show()
 ```
 
 <p align="center" name="multiplicity">
-      <img src="multiplicity.png" alt="alt text" width="50%" height="50%">
+      <img src="multiplicity.png" alt="alt text" width="100%" height="100%">
 </p>
 
 
