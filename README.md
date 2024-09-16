@@ -1,11 +1,5 @@
 # Path-homology-with-field-coefficients
 
-header-includes:
-  - \usepackage{mathtools}
-output:
-  pdf_document:
-    keep_tex: true
-
 # Table of Contents
 
 1. [Overview](#Overview)
