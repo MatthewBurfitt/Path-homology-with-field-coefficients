@@ -15,10 +15,21 @@ Computes (though not especially efficiently) the path homology, path homology bo
 
 This code accompanies the paper: Matthew Burfitt and Tyrone Cutler, [Inductive construction of path homology chains](???).
 The original purpose of the code was to independently check the examples Section 6 of the paper, which we include as example scrips.
-The algorithm is independent of the method developed in the paper above and based on procedure outlaid in the paper: Alexander Grigor’yan, [Advances in path homology theory of digraphs](https://intlpress.com/site/pub/files/_fulltext/journals/iccm/2022/0010/0002/ICCM-2022-0010-0002-a007.pdf). Section 1.7.
+The algorithm is independent of the method developed in the paper above and based on the procedure outlaid in the paper: Alexander Grigor’yan, [Advances in path homology theory of digraphs](https://intlpress.com/site/pub/files/_fulltext/journals/iccm/2022/0010/0002/ICCM-2022-0010-0002-a007.pdf) Section 1.7.
 
 # Methods
 
+Let $`K`$ be the field of rational numbers $`\mathbb{Q}`$ or finite field $`\mathbb{Z}/p\mathbb{Z}`$ for some prime number $`p`$.
+The path homology of a digraph $`G`$ is obtained in the fllowing steps.
+
+1. Allowed paths are vertices of $`G`$ in dimension $`0`$, edges of $`G`$ in dimension $`1`$ and obtained in dimension $`n \geq 2`$ by concatenating any allowed paths in dimensions $`n-1`$ and an edge whose source vertex is the same as the final vertex in the $`(n-1)`$-path.
+
+2. A basis for the path chains $`C_*(G;K)`$ is obtained as the null space of the magnitude homology differential by identifying allowed paths with the basis of the diagonal magnitude chains.
+
+3. The boundary matrix of the path homology differential  $`M(\partial_n)`$ with respect to the computed basis of the path chains $`M(\partial_n)`$ is obtained directly form the basis of the path chains and the rank of the homology in dimension $`n \geq 0`$ is given by the standard formula
+```math
+\text{rank}(H_n(G;K) = \text{dim}(C_n(G;K)) - \text{rank}(M(\partial_n)) - \text{rank}(M(\partial_{n-1})).
+```
 
 
 # Installation
