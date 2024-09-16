@@ -1,7 +1,10 @@
-title: "Path-homology-with-field-coefficients"
+# Path-homology-with-field-coefficients
 
 header-includes:
   - \usepackage{mathtools}
+output:
+  pdf_document:
+    keep_tex: true
 
 # Table of Contents
 
