@@ -3,14 +3,23 @@
 # Table of Contents
 
 1. [Overview](#Overview)
-2. [Installation](#Installation)  
-3. [Usage](#Usage)
+2. [Methods](#Methods)
+3. [Installation](#Installation)  
+4. [Usage](#Usage)
       1. [Examples](#Examples)
       3. [Reference manual](#Reference-manual)
 
 # Overview
 
 Computes (though not especially efficiently) the path homology, path homology boundary matrices and bases of the path chain complex of a digraph with respect to coefficients that are rational or a finite field.
+
+This code accompanies the paper: Matthew Burfitt and Tyrone Cutler, [Inductive construction of path homology chains](???).
+The original purpose of the code was to independently check the examples Section 6 of the paper, which we include as example scrips.
+The algorithm is independent of the method developed in the paper above and based on procedure outlaid in the paper: Alexander Grigor’yan, [Advances in path homology theory of digraphs](https://intlpress.com/site/pub/files/_fulltext/journals/iccm/2022/0010/0002/ICCM-2022-0010-0002-a007.pdf). Section 1.7.
+
+# Methods
+
+
 
 # Installation
 
