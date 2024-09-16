@@ -118,8 +118,8 @@ G.plot()
 plt.show()
 ```
 
-<p align="center" name="Euler2">
-      <img src="Euler2.png" alt="alt text" width="50%" height="50%">
+<p align="center" name="octahedron">
+      <img src="octahedron.png">
 </p>
 
 This exmaple come form the paper: Xin Fu and Sergei Ivanov, [Path homology of digraphs without multisquares and its comparison
@@ -153,8 +153,8 @@ G.plot(positions = positions)
 plt.show()
 ```
 
-<p align="center" name="octahedron">
-      <img src="octahedron.png" alt="alt text" width="50%" height="50%">
+<p align="center" name="Euler2">
+      <img src="Euler2.png" alt="alt text" width="50%" height="50%">
 </p>
 
 The next example corresponds to Example 6.1 form the a accompanying paper.
