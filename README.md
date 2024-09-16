@@ -29,10 +29,10 @@ The path homology of a digraph $`G`$ is computed in the fllowing steps.
 3. The boundary matrix of the path homology differential  $`M(\partial_n)`$ with respect to the computed basis of the path chains and is obtained directly form the basis of the path chains.
 
 4. The rank of the homology in dimension $`n \geq 0`$ is given by the standard formula
-```math
-\text{rank}\left(H_n(G;K)\right) = \text{dim}\left(C_n(G;K)\right) - \text{rank}\left(M(\partial_n)\right) - \text{rank}\left(M(\partial_{n-1})\right)
-```
-where $`\text{rank}\left(M(\partial_{-1})\right) = 0`$.
+      ```math
+      \text{rank}\left(H_n(G;K)\right) = \text{dim}\left(C_n(G;K)\right) - \text{rank}\left(M(\partial_n)\right) - \text{rank}\left(M(\partial_{n-1})\right)
+      ```
+      where $`\text{rank}\left(M(\partial_{-1})\right) = 0`$.
 
 # Installation
 
