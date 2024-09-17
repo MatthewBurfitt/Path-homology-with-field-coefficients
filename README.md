@@ -26,7 +26,7 @@ The path homology of a digraph $`G`$ is computed in the fllowing steps.
 
 2. A basis for the path chains $`C_*(G;K)`$ is obtained as the null space of the magnitude homology differential by identifying allowed paths with the basis of the diagonal magnitude chains.
 
-3. The boundary matrix of the path homology differential  $`M(\partial_n)`$ with respect to the computed basis of the path chains and is obtained directly form the basis of the path chains.
+3. The boundary matrix of the path homology differential  $`M(\partial_n)`$ is obtained on the computed basis of the path chains directly in terms of allowed paths and then transformed so that the image is given with respect to the path chain basis in dimension $`n-1`$.
 
 4. The rank of the homology in dimension $`n \geq 0`$ is given by the standard formula
 ```math
