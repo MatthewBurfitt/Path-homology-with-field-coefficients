@@ -30,9 +30,9 @@ The path homology of a digraph $`G`$ is computed in the fllowing steps.
 
 4. The rank of the homology in dimension $`n \geq 0`$ is given by the standard formula
 ```math
-\text{rank}\left(H_n(G;K)\right) = \text{dim}\left(C_n(G;K)\right) - \text{rank}\left(M(\partial_n)\right) - \text{rank}\left(M(\partial_{n-1})\right)
+\text{rank}\left(H_n(G;K)\right) = \text{dim}\left(C_n(G;K)\right) - \text{rank}\left(M(\partial_n)\right) - \text{rank}\left(M(\partial_{n+1})\right)
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where $`\text{rank}\left(M(\partial_{-1})\right) = 0`$.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where $`\text{rank}\left(M(\partial_{0})\right) = 0`$.
 
 # Installation
 
@@ -118,7 +118,7 @@ G.plot()
 plt.show()
 ```
 
-<p align="center" name="octahedron" width="75%" height="75%">
+<p align="center" name="octahedron" width="50%" height="50%">
       <img src="octahedron.png">
 </p>
 
