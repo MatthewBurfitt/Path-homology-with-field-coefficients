@@ -215,7 +215,7 @@ Try changing the value of $`t`$ and or the coefficients!
 
 ```python
 #generate digraph edges and a set of vertex positions
-def T_t(t = 3):
+def E_t(t = 3):
     edges = [('T','u1A'),('T','u2A'),
              ('u1A','vA'),('u2A','vA'),]
     vertex_positions = {'T':(-3*t+1,0),
@@ -250,7 +250,7 @@ def T_t(t = 3):
     return edges, vertex_positions
 
 #define digraph
-edge, positions = T_t(t = 3)
+edge, positions = E_t(t = 3)
 G = ph.Digraph(edges = edge)
 
 #show chain rank vector with different coefficients
