@@ -124,8 +124,8 @@ plt.show()
 
 This exmaple come form the paper: Xin Fu and Sergei Ivanov, [Path homology of digraphs without multisquares and its comparison
 with homology of spaces](https://arxiv.org/pdf/2407.17001) Section 5.4.
-The digraph $`G`$ has a homology of rank $`1`$ in dimension $`4`$ with coefficients $`Z/2Z`$ and homology of rank $`0`$ in dimension $`4`$ with coefficients $`Q`$ or $`Z/pZ`$ for $`p`$ a prime larger than $`2`$.
-In particular, as the homology ranks in other dimensions remain the same with the coefficients above, the Euler characteristic changes.
+The digraph $`G`$ has path chain rank $`1`$ in dimension $`4`$ with coefficients $`Z/2Z`$ and path chain rank $`0`$ in dimension $`4`$ with coefficients $`Q`$ or $`Z/pZ`$ for $`p`$ a prime larger than $`2`$.
+In particular, as the path chain ranks in other dimensions remain the same with all the coefficients above, the Euler characteristic changes depending on the coefficients.
 
 ```python
 #define digraph
@@ -206,6 +206,66 @@ plt.show()
 
 <p align="center" name="multiplicity">
       <img src="multiplicity.png" alt="alt text" width="100%" height="100%">
+</p>
+
+The final example corresponds to Example 6.2 form the accompanying paper.
+The digraph $`G`$ has path chain rank $`1`$ in dimension $`4`$ with coefficients $`Z/tZ`$ (t is set to 3 below) and path chain rank $`0`$ in dimension $`4`$ with coefficients $`Q`$ or $`Z/pZ`$ for $`p`$ a prime larger than $`2`$ and not equal to $`t`$.
+In particular, as the path chain ranks in other dimensions remain the same with all the coefficients above, the Euler characteristic changes depending on the coefficients.
+Try changing the value of $`t`$ and or the coefficients!
+
+```python
+#generate digraph edges and a set of vertex positions
+def T_t(t = 3):
+    edges = [('T','u1A'),('T','u2A'),
+             ('u1A','vA'),('u2A','vA'),]
+    vertex_positions = {'T':(-3*t+1,0),
+                        'u1A':(1,1),'u2A':(2,1),
+                        'vA':(1.5,2),
+                        'H':(-3*t-0.5,4)}
+    for i in range(0,2*t):
+        edges.append(('T','u'+str(i)+'C'))
+        edges.append(('T','v'+str(i)+'C'))
+        #
+        edges.append(('u1A','v'+str(i)+'B1'))
+        edges.append(('u2A','v'+str(i)+'B2'))
+        edges.append(('u'+str(i)+'C','v'+str(i)+'B1'))
+        edges.append(('u'+str(i)+'C','v'+str(i)+'B2'))
+        edges.append(('u'+str(i)+'C','v'+str(i)+'C'))
+        #
+        edges.append(('v'+str(i)+'B1','w'+str((i+1)%(2*t))))
+        edges.append(('v'+str(i)+'B2','w'+str(i)))
+        edges.append(('v'+str(i)+'C','w'+str(i)))
+        edges.append(('v'+str(i)+'C','w'+str((i+1)%(2*t))))
+        edges.append(('vA','w'+str(i)))
+        #
+        edges.append(('v'+str(i)+'B1','H'))
+        edges.append(('v'+str(i)+'B2','H'))
+        edges.append(('w'+str(i),'H'))
+        #
+        vertex_positions['u'+str(i)+'C'] = ((-3*i-1),1)
+        vertex_positions['v'+str(i)+'C'] = ((-3*i-1),2)
+        vertex_positions['v'+str(i)+'B1'] = ((-3*i-2),2)
+        vertex_positions['v'+str(i)+'B2'] = ((-3*i),2)
+        vertex_positions['w'+str(i)] = ((-3*i-1),3)
+    return edges, vertex_positions
+
+#define digraph
+edge, positions = T_t(t = 3)
+G = ph.Digraph(edges = edge)
+
+#show chain rank vector with different coefficients
+print('path chain rank vector over Q:   ', G.chain_rank_vector(max_dim = 5, coefficients = 0))
+print('path chain rank vector over Z/2Z:', G.chain_rank_vector(max_dim = 5, coefficients = 2))
+print('path chain rank vector over Z/3Z:', G.chain_rank_vector(max_dim = 5, coefficients = 3))
+print('path chain rank vector over Z/5Z:', G.chain_rank_vector(max_dim = 5, coefficients = 5))
+
+#display the digraph
+G.plot(positions = positions)
+plt.show()
+```
+
+<p align="center" name="Eulerp">
+      <img src="Eulerp.png" alt="alt text" width="100%" height="100%">
 </p>
 
 
