@@ -19,10 +19,10 @@ def E_t(t = 3):
         edges.append(('u'+str(i)+'C','v'+str(i)+'B2'))
         edges.append(('u'+str(i)+'C','v'+str(i)+'C'))
         #
-        edges.append(('v'+str(i)+'B1','w'+str((i+1)%(t))))
+        edges.append(('v'+str(i)+'B1','w'+str((i+1)%t)))
         edges.append(('v'+str(i)+'B2','w'+str(i)))
         edges.append(('v'+str(i)+'C','w'+str(i)))
-        edges.append(('v'+str(i)+'C','w'+str((i+1)%(t))))
+        edges.append(('v'+str(i)+'C','w'+str((i+1)%t)))
         edges.append(('vA','w'+str(i)))
         #
         edges.append(('v'+str(i)+'B1','H'))
