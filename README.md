@@ -218,11 +218,11 @@ Try changing the value of $`t`$ and or the coefficients!
 def E_t(t = 3):
     edges = [('T','u1A'),('T','u2A'),
              ('u1A','vA'),('u2A','vA'),]
-    vertex_positions = {'T':(-3*t+1,0),
+    vertex_positions = {'T':(-t,0),
                         'u1A':(1,1),'u2A':(2,1),
                         'vA':(1.5,2),
-                        'H':(-3*t-0.5,4)}
-    for i in range(0,2*t):
+                        'H':(-t,4)}
+    for i in range(0,t):
         edges.append(('T','u'+str(i)+'C'))
         edges.append(('T','v'+str(i)+'C'))
         #
@@ -232,10 +232,10 @@ def E_t(t = 3):
         edges.append(('u'+str(i)+'C','v'+str(i)+'B2'))
         edges.append(('u'+str(i)+'C','v'+str(i)+'C'))
         #
-        edges.append(('v'+str(i)+'B1','w'+str((i+1)%(2*t))))
+        edges.append(('v'+str(i)+'B1','w'+str((i+1)%t)))
         edges.append(('v'+str(i)+'B2','w'+str(i)))
         edges.append(('v'+str(i)+'C','w'+str(i)))
-        edges.append(('v'+str(i)+'C','w'+str((i+1)%(2*t))))
+        edges.append(('v'+str(i)+'C','w'+str((i+1)%t)))
         edges.append(('vA','w'+str(i)))
         #
         edges.append(('v'+str(i)+'B1','H'))
