@@ -294,7 +294,19 @@ Given a homology directory, returned by the 'path_homology' function of the 'Pat
 
 ### Digraph class
 
+#### &#x1F539; Class PathHomology.Digraph(vertices = [], edges = [])
+
+A python class representing a digraph.
+
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **vertices** | List of strings, where each string corresponds to a vertex of the digraph. If left empty, as is the case by default, then vertices will simply be added when required in an edge. |
+| | **edges** | List of pairs of strings. Each pair represents an edge in the digraph, each string in the pair corresponds to a vertex of the digraph, the first string being the source vertex and the second string being the target vertex. |
+
+The PathHomology.Digraph class has the following proprieties:
 
 
+
+The PathHomology.Digraph class contains the following functions:
 
 
