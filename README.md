@@ -273,20 +273,21 @@ plt.show()
 
 ### Display functions
 
-Given the allowed paths in a digraph and a basis of the path homology chains indexing allowed paths, displays in an easily readable format the basis in terms of of the allowed paths explicitly in any given dimension.
-
 #### &#x1F539; PathHomology.display_path_chain_basis(null_spaces, paths, dim = 0)
 
-Approximates the neighborhood boundary volume in a hypercube using the fast gradient sign method (FGSM) function at various distances for given epsilon values.
+Given the allowed paths in a digraph and a basis of the path homology chains indexing allowed paths, displays in an easily readable format the basis in terms of the allowed paths explicitly in any given dimension.
 
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
-| **Parameters:** | **null_spaces** | List of two dimensional numpy arrays, where each array represents a matrix in which each row is the multiplicity of the corresponding allowed path in the accomnaying paths list. |
-| | **paths** | List of lists of strings. There is an entry in the list for each dimensions and each string corresponds to a vertex in a digraph with each inner list corresponds to an allowed path in the same digraph. |
+| **Parameters:** | **null_spaces** | List of two dimensional numpy arrays, where each array represents a matrix in which each row is the multiplicity of the corresponding allowed path in the accomnaying 'paths' list. |
+| | **paths** | List of two dimensional numpy arrays, where each array represents a matrix in which each row is the multiplicity of the corresponding allowed path in the accompanying ‘paths’ list. |
 | | **dim** | Integer greater than or equal to zero which is at least one less than the total number of null spaces and paths. |
 
-#### &#x1F539; NeighbourhoodBoundaryVolume.all_dist_TrainBvol(model, data, epsilon = None, radius = 0.2, batches = 1, batch_size = 10000, verbose = 2, display_eps = None)
+#### &#x1F539; PathHomology.display_homology(homology)
 
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **homology** | A directory, containing information about the homology groups of a digraph returned by the 'path_homology' function of the 'PathHomology.Digraph' class. |
 
 
 ### Digraph class
