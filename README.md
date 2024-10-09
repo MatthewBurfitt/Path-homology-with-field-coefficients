@@ -285,6 +285,8 @@ Given the allowed paths in a digraph and a basis of the path homology chains ind
 
 #### &#x1F539; PathHomology.display_homology(homology)
 
+Given a homology directory, returned by the 'path_homology' function of the 'PathHomology.Digraph' class, displays in an easily readable format the homology groups in each dimension in their associated coefficients.
+
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
 | **Parameters:** | **homology** | A directory, containing information about the homology groups of a digraph returned by the 'path_homology' function of the 'PathHomology.Digraph' class. |
