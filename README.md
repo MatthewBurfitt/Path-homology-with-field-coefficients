@@ -365,20 +365,46 @@ Removes multiple edges to the digraph. Any necessary vertices are also added aut
 
 #### &#x1F539; plot(positions = None)
 
+Plots an image of the digraph.
+
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **positions** | A directory with a key corresponding to each vertex in the digraph each containing a pair of integers the determine the position of where the vertex is plotted in the plane. If no potions are specified the positions will be chosen automatically. |
 
 #### &#x1F539; get_allowed_paths(max_dim = 3)
 
+Obtains from the digraph all the allowed paths up to a specified length.
+
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **max_dim** | Integer indicating the maxima length of allowed paths to compute. |
+| **returns** | | A list of lists if strings, where each string is a vertex of the digraph and the each list of vertices is an allowed path in the digraph. |
 
 #### &#x1F539; magnitude_differentials(max_dim = 3)
+
+Obtains from the digraph all matrices of magnitude differentials up to a specified dimension, along with the corresponding allowed paths and images under magnitude differentials corresponding to the rows and columns of the differential matrices.
+
 
 
 #### &#x1F539; path_chain_basis(max_dim = 3, coefficients = 0)
 
 
+
+
+
 #### &#x1F539; chain_rank_vector(max_dim = 3, coefficients = 0)
+
+
+
 
 
 #### &#x1F539; path_differentials(max_dim = 3, coefficients = 0)
 
 
+
+
+
 #### &#x1F539; path_homology(max_dim = 3, coefficients = 0, as_vector = False)
+
+
+
