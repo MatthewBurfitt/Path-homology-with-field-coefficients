@@ -305,8 +305,52 @@ A python class representing a digraph.
 
 The PathHomology.Digraph class has the following proprieties:
 
+#### &#x1F539; vertex_number
 
+**returns:** the number of vertices in the digraph 
+
+#### &#x1F539; edge_number
+
+**returns:** the number of edges in the digraph 
 
 The PathHomology.Digraph class contains the following functions:
 
+#### &#x1F539; add_vertex(vertex = [])
 
+
+
+#### &#x1F539; remove_vertex(vertex = [])
+
+
+
+#### &#x1F539; add_edge(edge)
+
+
+#### &#x1F539; add_multiple_edges(edges = [])
+
+
+#### &#x1F539; remove_edge(edge)
+
+
+#### &#x1F539;remove_multiple_edges(edges = [])
+
+
+#### &#x1F539; plot(positions = None)
+
+
+#### &#x1F539; get_allowed_paths(max_dim = 3)
+
+
+#### &#x1F539; magnitude_differentials(max_dim = 3)
+
+
+#### &#x1F539; path_chain_basis(max_dim = 3, coefficients = 0)
+
+
+#### &#x1F539; chain_rank_vector(max_dim = 3, coefficients = 0)
+
+
+#### &#x1F539; path_differentials(max_dim = 3, coefficients = 0)
+
+
+#### &#x1F539; path_homology(max_dim = 3, coefficients = 0, as_vector = False)
