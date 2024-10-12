@@ -307,11 +307,11 @@ The PathHomology.Digraph class has the following proprieties:
 
 #### &#x1F539; vertex_number
 
-**returns:** the number of vertices in the digraph 
+**Returns:** the number of vertices in the digraph 
 
 #### &#x1F539; edge_number
 
-**returns:** the number of edges in the digraph 
+**Returns:** the number of edges in the digraph 
 
 The PathHomology.Digraph class contains the following functions:
 
