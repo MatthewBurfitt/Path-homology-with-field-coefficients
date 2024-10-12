@@ -296,7 +296,7 @@ Given a homology directory, returned by the 'path_homology' function of the 'Pat
 
 #### &#x1F539; Class PathHomology.Digraph(vertices = [], edges = [])
 
-A python class representing a digraph.
+A python class representing a digraph. Note, any necessary vertices are contained in an edge and not in the 'vertices' variable are added automatically.
 
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
@@ -317,23 +317,51 @@ The PathHomology.Digraph class contains the following functions:
 
 #### &#x1F539; add_vertex(vertex = [])
 
+Adds additional vertex or vertices to the digraph.
 
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **vertices** | List of strings, where each string corresponds to a vertex of the digraph or a string corresponds to a single vertex of the digraph to be added. |
 
 #### &#x1F539; remove_vertex(vertex = [])
 
+Remove vertex or vertices and all associated edges from the digraph.
 
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **vertices** | List of strings, where each string corresponds to a vertex of the digraph or a string corresponds to a single vertex of the digraph to be removed. |
 
 #### &#x1F539; add_edge(edge)
 
+Adds a single edge to the digraph. Any necessary vertices are also added automatically.
+
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **edges** | Pairs of strings, where each string in the pair corresponds to a vertex of the digraph, the first string being the source vertex and the second string being the target vertex. |
 
 #### &#x1F539; add_multiple_edges(edges = [])
 
+Adds multiple edges to the digraph. Any necessary vertices are also added automatically.
+
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **edges** | List of pairs of strings. Each pair represents an edge in the digraph, each string in the pair corresponds to a vertex of the digraph, the first string being the source vertex and the second string being the target vertex. |
 
 #### &#x1F539; remove_edge(edge)
 
+Removes a single edge to the digraph.
 
-#### &#x1F539;remove_multiple_edges(edges = [])
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **edges** | Pairs of strings, where each string in the pair corresponds to a vertex of the digraph, the first string being the source vertex and the second string being the target vertex. |
 
+#### &#x1F539; remove_multiple_edges(edges = [])
+
+Removes multiple edges to the digraph. Any necessary vertices are also added automatically.
+
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **edges** | List of pairs of strings. Each pair represents an edge in the digraph, each string in the pair corresponds to a vertex of the digraph, the first string being the source vertex and the second string being the target vertex. |
 
 #### &#x1F539; plot(positions = None)
 
