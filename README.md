@@ -378,7 +378,7 @@ Obtains from the digraph all the allowed paths up to a specified length.
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
 | **Parameters:** | **max_dim** | Integer indicating the maxima length of allowed paths to compute. |
-| **returns** | | A list of lists if strings, where each string is a vertex of the digraph and the each list of vertices is an allowed path in the digraph. |
+| **Returns:** | | A list of lists if strings, where each string is a vertex of the digraph and the each list of vertices is an allowed path in the digraph. |
 
 #### &#x1F539; magnitude_differentials(max_dim = 3)
 
