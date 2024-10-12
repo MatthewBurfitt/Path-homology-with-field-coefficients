@@ -283,13 +283,14 @@ class Digraph:
 
 
     #path homology and homology rank vector up to a given dimension with given coefficients
-    def path_homology(self, max_dim = 3, coefficients = 0):
+    def path_homology(self, max_dim = 3, coefficients = 0, as_vector = False):
+        homology_vector = np.zeros(max_dim+1).astype(int)
         homology = {}
         homology['coefficients'] = coefficients
         homology['last dimension computed'] = max_dim
-        bnd_matrices, null_spaces, paths = self.path_differentials(max_dim = max_dim+1, coefficients = coefficients)
+        bnd_matrices, null_spaces, paths = self.path_differentials(max_dim = max_dim+2, coefficients = coefficients)
         last_rank = 0
-        for dim in range(max_dim):
+        for dim in range(max_dim+1):
             if type(coefficients) == int and coefficients > 1:
                 homology_vec = np.abs(np.array(smith_normal_form(Matrix(bnd_matrices[dim].astype(int)),
                                                                  domain = GF(coefficients))).diagonal())
@@ -299,12 +300,16 @@ class Digraph:
             rank = np.sum(homology_vec != 0)
             free_rank = len(null_spaces[dim]) - last_rank - rank
             if free_rank > 0:
+                homology_vector[dim] = free_rank
                 if type(coefficients) == int and coefficients > 1:
                         homology['dimension '+str(dim)] = ('(Z/'+str(coefficients)+'Z)',str(free_rank))
                 else:
                         homology['dimension '+str(dim)] = ('Q',str(free_rank))
             last_rank = rank
-        return homology, bnd_matrices, null_spaces, paths
+        if as_vector:
+            return homology_vector, bnd_matrices, null_spaces, paths
+        else:
+            return homology, bnd_matrices, null_spaces, paths
 
 
     
