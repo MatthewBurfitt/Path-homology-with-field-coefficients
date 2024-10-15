@@ -378,13 +378,18 @@ Obtains from the digraph all the allowed paths up to a specified length.
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
 | **Parameters:** | **max_dim** | Integer indicating the maxima length of allowed paths to compute. |
-| **Returns:** | | A list of lists if strings, where each string is a vertex of the digraph and the each list of vertices is an allowed path in the digraph. |
+| **Returns:** | | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an allowed path in the digraph. |
 
 #### &#x1F539; magnitude_differentials(max_dim = 3)
 
 Obtains from the digraph all matrices of magnitude differentials up to a specified dimension, along with the corresponding allowed paths and images under magnitude differentials corresponding to the rows and columns of the differential matrices.
 
-
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **max_dim** | Integer indicating the maximum dimension of magnitude boundary matrix to be computed. |
+| **Returns:** | **differential_matrices** | A list of 2-dimensional integer numpy arrays representing the boundary matrices on the diagonal magnitude homology magnitude with respect to the allowed paths (rows) and path images (colums) in given in the subsequent two output variables. |
+| | **allowed_paths** | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an allowed path in the digraph.  |
+| | **path_images** | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an element of a module in a second diagonal magnitude homology chain complex (the image of the magnitude differential on the diagonal magnitude chains). |
 
 #### &#x1F539; path_chain_basis(max_dim = 3, coefficients = 0)
 
