@@ -404,9 +404,13 @@ Obtains from the digraph all path homology chain bases up to a specified dimensi
 
 #### &#x1F539; chain_rank_vector(max_dim = 3, coefficients = 0)
 
-Obtains from the digraph a vector of path chain dimensions up to a specified dimension
+Obtains from the digraph a vector of path chain dimensions up to a specified dimension.
 
-
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **max_dim** | Non-negative integer indicating the maximum dimension of path chain dimensions to be computed. |
+| | **coefficients** | Non-negative integer denoting the characteristic of the coefficient field over which to compute. |
+| **Returns:** |  | List of dimensions of the path chain complex with the degree in the corresponding index up to the maximum dimension specified. |
 
 #### &#x1F539; path_differentials(max_dim = 3, coefficients = 0)
 
