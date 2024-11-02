@@ -251,17 +251,26 @@ class Digraph:
                 for j in range(len(element)):
                     if element[j] != 0:
                         for i in range(dim + 1):
-                            image = paths[dim][j][:i]+paths[dim][j][i+1:]
-                            if image in diff_paths:
-                                diff_path_coefs[diff_paths.index(image)] += (-1)**i * element[j]
+                            #check the image is regular and if not keep as zero
+                            if i == 0 or i == dim:
+                                regular = True
                             else:
-                                diff_paths.append(image)
-                                diff_path_coefs.append((-1)**i * element[j])
+                                if paths[dim][j][i-1] == paths[dim][j][i+1]:
+                                    regular = False
+                                else:
+                                    regular = True
+                            if regular:
+                                image = paths[dim][j][:i]+paths[dim][j][i+1:]
+                                if image in diff_paths:
+                                    diff_path_coefs[diff_paths.index(image)] += (-1)**i * element[j]
+                                else:
+                                    diff_paths.append(image)
+                                    diff_path_coefs.append((-1)**i * element[j])
                 #correct for coefficients in finite field
                 if type(coefficients) == int and coefficients > 0:
                     for i in range(len(diff_path_coefs)):
                         diff_path_coefs[i] = diff_path_coefs[i] % coefficients
-                #first compute row corresponding to alowed paths
+                #first compute row corresponding to allowed paths
                 path_row = [0]*len(paths[dim - 1])
                 for i in range(len(diff_paths)):
                     if diff_path_coefs[i] != 0:
