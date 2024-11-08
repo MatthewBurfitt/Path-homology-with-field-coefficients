@@ -416,10 +416,26 @@ Obtains from the digraph a vector of path chain dimensions up to a specified dim
 
 Obtains from the digraph all path homology differential matrices along with the corresponding path homology chain bases up to a specified dimension and coefficients, along with the allowed paths appearing in the bases.
 
-
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **max_dim** | Non-negative integer indicating the maximum dimension of path homology differential matrices to compute. |
+| | **coefficients** | Non-negative integer denoting the characteristic of the coefficient field over which to compute. |
+| **Returns:** | **differential_matrices** |   |
+| | **null_spaces** | A list of 2-dimensional numpy arrays, where each row of an array in a particular index in the list corresponds to an element of a basis of the path chain complex in the dimension of the list index. More precisely, the entire of a row is the multiplicity of the allowed path appearing in a particular column index correspond to the same index in the second variable returned by the function containing the paths variable. |
+| | **paths** | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an allowed path in the digraph.  Note only the allowed paths occurring in the bases are provided to minimize the size of all output variables. |
 
 #### &#x1F539; path_homology(max_dim = 3, coefficients = 0, as_vector = False)
 
 Obtains from the digraph it path homology groups, all path homology differential matrices along with the corresponding path homology chain bases up to a specified dimension and coefficients, along with the allowed paths appearing in the bases.
+
+|  | Variable | Description |
+| ------------ | ------------- | ------------- |
+| **Parameters:** | **max_dim** | Non-negative integer indicating the maximum path homology dimension to be computed. |
+| | **coefficients** | Non-negative integer denoting the characteristic of the coefficient field over which to compute. |
+| | **as_vector** | Bool, indicating the type of output to return in the ‘homology’ variable. |
+| **Returns:** | **homology** | If the variable ‘as_vector’ is set to true returns a list of integers where each index contains the corresponding rank of the homology group in that dimension. Otherwise, returns a directory containing the coefficients variable, the last dimension computed and the dimension of the homology in all non-trival dimensions computed. |
+| | **bnd_matrices** |  |
+| | **null_spaces** | A list of 2-dimensional numpy arrays, where each row of an array in a particular index in the list corresponds to an element of a basis of the path chain complex in the dimension of the list index. More precisely, the entire of a row is the multiplicity of the allowed path appearing in a particular column index correspond to the same index in the second variable returned by the function containing the allowed paths variable. |
+| | **paths** | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an allowed path in the digraph.  Note only the allowed paths occurring in the bases are provided to minimize the size of all output variables. |
 
 
