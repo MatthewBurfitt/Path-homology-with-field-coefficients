@@ -3,7 +3,7 @@
 # Table of Contents
 
 1. [Overview](#Overview)
-2. [Methods](#Methods)
+2. [Method](#Method)
 3. [Installation](#Installation)  
 4. [Usage](#Usage)
       1. [Examples](#Examples)
@@ -17,7 +17,7 @@ This code accompanies the paper: Matthew Burfitt and Tyrone Cutler, [Inductive c
 The original purpose of the code was to independently check the examples in Section 6 of the paper, which we also include as example python scrips.
 The algorithm is independent of the methods developed in the paper and based on a procedure outlaid in the paper: Alexander Grigor’yan, [Advances in path homology theory of digraphs](https://intlpress.com/site/pub/files/_fulltext/journals/iccm/2022/0010/0002/ICCM-2022-0010-0002-a007.pdf) Section 1.7.
 
-# Methods
+# Method
 
 Let $`K`$ be the field of rational numbers $`\mathbb{Q}`$ or a finite field $`\mathbb{Z}/p\mathbb{Z}`$ for some prime number $`p`$.
 The path homology of a digraph $`G`$ is computed in the following steps.
