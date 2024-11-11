@@ -38,7 +38,7 @@ The path homology of a digraph $`G`$ is computed in the following steps.
 
 Required python packages: numpy (version 1.26.4), matplotlib (version 3.8.4), networkx (version 3.3) and sympy (version 1.12).
 
-Place a copy of "PathHomology.py" in your python path, nothing else required other than Python 3 (version 3.10.4).
+Place a copy of "PathHomology.py" in your python path, nothing else is required other than Python 3 (version 3.10.4).
 
 # Usage
 
