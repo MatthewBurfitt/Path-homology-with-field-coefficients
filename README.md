@@ -20,11 +20,11 @@ The algorithm is independent of the methods developed in the paper and based on 
 # Methods
 
 Let $`K`$ be the field of rational numbers $`\mathbb{Q}`$ or a finite field $`\mathbb{Z}/p\mathbb{Z}`$ for some prime number $`p`$.
-The path homology of a digraph $`G`$ is computed in the fllowing steps.
+The path homology of a digraph $`G`$ is computed in the following steps.
 
-1. Allowed paths are vertices of $`G`$ in dimension $`0`$, edges of $`G`$ in dimension $`1`$ and obtained in dimension $`n \geq 2`$ by concatenating any allowed paths in dimensions $`n-1`$ and an edge whose source vertex is the same as the final vertex in the $`(n-1)`$-path.
+1. Allowed paths consist of: vertices of $`G`$ in dimension $`0`$, edges of $`G`$ in dimension $`1`$ and are obtained in dimension $`n \geq 2`$ by concatenating any allowed paths in dimensions $`n-1`$ and an edge whose source vertex is the same as the final vertex in the $`(n-1)`$-path.
 
-2. A basis for the path chains $`C_*(G;K)`$ is obtained as the null space of the magnitude homology differential by identifying allowed paths with the basis of the diagonal magnitude chains.
+2. A basis for the path chains $`C_*(G;K)`$ is obtained as the null space of the magnitude homology differential by identifying allowed paths with the basis of the diagonal magnitude chains (see Section 2.4 of [the accompanying paper](???)).
 
 3. The boundary matrix of the path homology differential  $`M(\partial_n)`$ is obtained on the computed basis of the path chains directly in terms of allowed paths and then transformed so that the image is given with respect to the path chain basis in dimension $`n-1`$.
 
