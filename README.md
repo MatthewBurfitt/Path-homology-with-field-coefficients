@@ -50,8 +50,9 @@ import PathHomology as ph
 
 ## Examples
 
-Example computing each basis of the path chain complex of a multisquare digraph and gain after adding an additional edge across the multisquare.
-In the first case a basis in dimensions $`2`$ consists of two elements obtained as the difference of two $`2`$-paths around distinct directed squares, in the second the basis consists of all $`2`$-paths.
+In the first example we compute a basis of the path chain complex of a multisquare digraph and then compute a basis of the path chain complex after adding an additional edge across the multisquare.
+For the multisquare, a basis in dimensions $`2`$ consists of two elements obtained as the difference of two $`2`$-paths around distinct directed squares.
+After adding the additional edge a basis then consists of all $`2`$-paths.
 
 ```python
 import PathHomology as ph
@@ -73,7 +74,7 @@ plt.show()
 #add an additional edge to the digraph between vertices 'u' and 'w'
 G.add_edge(('u','w'))
 
-#obtain basis of the path chain complex of the digraph G
+#obtain a basis of the path chain complex of the digraph G
 null_spaces, paths = G.path_chain_basis(max_dim = 3, coefficients = 0)
 ph.display_path_chain_basis(null_spaces, paths, dim = 2)
 
