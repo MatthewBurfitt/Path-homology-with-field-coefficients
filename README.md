@@ -87,7 +87,7 @@ plt.show()
       <img src="multisquare.png">
 </p>
 
-Example computing the path homology of a digraph $`G`$ whose edges lie on the one-skeleton of a octahedron.
+Our second example concerns computing the path homology of a digraph $`G`$ whose edges lie on the one-skeleton of a octahedron.
 In particulare, we see that the path homology groups of $`G`$ are
 ```math
 H_n(G;\mathbb{Q}) =
@@ -123,10 +123,10 @@ plt.show()
       <img src="octahedron.png">
 </p>
 
-This exmaple come form the paper: Xin Fu and Sergei Ivanov, [Path homology of digraphs without multisquares and its comparison
+This next exmaple comes form the paper: Xin Fu and Sergei Ivanov, [Path homology of digraphs without multisquares and its comparison
 with homology of spaces](https://arxiv.org/pdf/2407.17001) Section 5.4.
 The digraph $`G`$ has path chain rank $`1`$ in dimension $`4`$ with coefficients $`Z/2Z`$ and path chain rank $`0`$ in dimension $`4`$ with coefficients $`Q`$ or $`Z/pZ`$ for $`p`$ a prime larger than $`2`$.
-In particular, as the path chain ranks in other dimensions remain the same with all the coefficients above, the Euler characteristic changes depending on the coefficients.
+In particular, as the path chain ranks in other dimensions remain the same with all coefficients listed above, the Euler characteristic changes depending on the coefficients.
 
 ```python
 #define digraph
@@ -158,7 +158,7 @@ plt.show()
       <img src="Euler2.png" alt="alt text" width="100%" height="100%">
 </p>
 
-The next example corresponds to Example 6.1 form the a accompanying paper.
+The following example corresponds to Example 6.1 form the [the accompanying paper](???).
 With rational coefficients, the path boundary matrix of the digraph $`G`$ between dimension $`4`$ and dimension $`3`$ has entries of an arbitrary multiplicity $`t`$.
 Try changing the value of $`t`$ and or the coefficients!
 
