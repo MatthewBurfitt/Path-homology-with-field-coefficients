@@ -383,12 +383,12 @@ Obtains from the digraph all the allowed paths up to a specified length.
 
 #### &#x1F539; magnitude_differentials(max_dim = 3)
 
-Obtains from the digraph all matrices of magnitude differentials up to a specified dimension and coefficients, along with the corresponding allowed paths and images under magnitude differentials corresponding to the rows and columns of the differential matrices.
+Obtains from the digraph all matrices of magnitude differentials up to a specified dimension and coefficients, along with the corresponding allowed paths and images under the magnitude differentials corresponding to the rows and columns of the differential matrices.
 
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
 | **Parameters:** | **max_dim** | Non-negative integer indicating the maximum dimension of magnitude boundary matrix to be computed. |
-| **Returns:** | **differential_matrices** | A list of 2-dimensional integer numpy arrays representing the boundary matrices on the diagonal magnitude homology magnitude with respect to the allowed paths (rows) and path images (colums) in given in the subsequent two output variables. |
+| **Returns:** | **differential_matrices** | A list of 2-dimensional integer numpy arrays representing the boundary matrices of the diagonal magnitude homology with respect to the allowed paths (rows) and path images (columns) given in the subsequent two output variables. |
 | | **allowed_paths** | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an allowed path in the digraph.  |
 | | **path_images** | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an element of a module in a second diagonal magnitude homology chain complex (the image of the magnitude differential on the diagonal magnitude chains). |
 
@@ -400,8 +400,8 @@ Obtains from the digraph all path homology chain bases up to a specified dimensi
 | ------------ | ------------- | ------------- |
 | **Parameters:** | **max_dim** | Non-negative integer indicating the maximum dimension of path homology chain basis to be computed. |
 | | **coefficients** | Non-negative integer denoting the characteristic of the coefficient field over which to compute. |
-| **Returns:** | **all_null_spaces** |  A list of 2-dimensional numpy arrays, where each row of an array in a particular index in the list corresponds to an element of a basis of the path chain complex in the dimension of the list index. More precisely, the entire of a row is the multiplicity of the allowed path appearing in a particular column index correspond to the same index in the second variable returned by the function containing the allowed paths. |
-| | **allowed_paths** | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an allowed path in the digraph.  Note only the allowed paths occurring in the bases are provided to minimize the size of all output variables. |
+| **Returns:** | **all_null_spaces** |  A list of 2-dimensional numpy arrays, where each row of an array in a particular index in the list corresponds to an element of a basis of the path chain complex in the dimension of the list index. More precisely, the entire in a row are the multiplicities of the allowed paths appearing in a particular column index, corresponding to the same index in the 'allowed_paths' variable. |
+| | **allowed_paths** | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an allowed path in the digraph.  Note, only the allowed paths occurring in the bases are provided in order to to minimize the size of the output variable. |
 
 #### &#x1F539; chain_rank_vector(max_dim = 3, coefficients = 0)
 
