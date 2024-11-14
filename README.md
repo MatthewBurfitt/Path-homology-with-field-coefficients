@@ -209,7 +209,7 @@ plt.show()
       <img src="multiplicity.png" alt="alt text" width="100%" height="100%">
 </p>
 
-The final example corresponds to Example 6.2 form the accompanying paper.
+The final example corresponds to Example 6.2 form [the accompanying paper](???).
 The digraph $`G`$ has path chain rank $`1`$ in dimension $`4`$ with coefficients $`Z/tZ`$ (t is set to 3 below) and path chain rank $`0`$ in dimension $`4`$ with coefficients $`Q`$ or $`Z/pZ`$ for $`p`$ a prime larger than $`2`$ and not equal to $`t`$.
 In particular, as the path chain ranks in other dimensions remain the same with all the coefficients above, the Euler characteristic changes depending on the coefficients.
 Try changing the value of $`t`$ and or the coefficients!
@@ -297,7 +297,7 @@ Given a homology directory, returned by the 'path_homology' function of the 'Pat
 
 #### &#x1F539; Class PathHomology.Digraph(vertices = [], edges = [])
 
-A python class representing a digraph. Note, any necessary vertices are contained in an edge and not in the 'vertices' variable are added automatically.
+A python class representing a digraph. Note, any necessary vertices that are contained in an edge and not in the 'vertices' variable are added automatically.
 
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
@@ -308,17 +308,17 @@ The PathHomology.Digraph class has the following proprieties:
 
 #### &#x1F539; vertex_number
 
-**Returns:** the number of vertices in the digraph 
+**Returns:** the number of vertices in the digraph.
 
 #### &#x1F539; edge_number
 
-**Returns:** the number of edges in the digraph 
+**Returns:** the number of edges in the digraph.
 
 The PathHomology.Digraph class contains the following functions:
 
 #### &#x1F539; add_vertex(vertex = [])
 
-Adds additional vertex or vertices to the digraph.
+Adds an additional vertex or vertices to the digraph.
 
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
@@ -350,7 +350,7 @@ Adds multiple edges to the digraph. Any necessary vertices are also added automa
 
 #### &#x1F539; remove_edge(edge)
 
-Removes a single edge to the digraph.
+Removes a single edge from the digraph.
 
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
@@ -358,7 +358,7 @@ Removes a single edge to the digraph.
 
 #### &#x1F539; remove_multiple_edges(edges = [])
 
-Removes multiple edges to the digraph. Any necessary vertices are also added automatically.
+Removes multiple edges from the digraph. Any necessary vertices are also added automatically.
 
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
@@ -370,7 +370,7 @@ Plots an image of the digraph.
 
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
-| **Parameters:** | **positions** | A directory with a key corresponding to each vertex in the digraph each containing a pair of integers the determine the position of where the vertex is plotted in the plane. If no potions are specified the positions will be chosen automatically. |
+| **Parameters:** | **positions** | A directory where each key corresponds to a vertex in the digraph and whose contents consists of a pair of integers that determine the position of the vertex when plotted in the plane. If no potions are specified the positions will be chosen automatically. |
 
 #### &#x1F539; get_allowed_paths(max_dim = 3)
 
@@ -378,7 +378,7 @@ Obtains from the digraph all the allowed paths up to a specified length.
 
 |  | Variable | Description |
 | ------------ | ------------- | ------------- |
-| **Parameters:** | **max_dim** | Integer indicating the maxima length of allowed paths to compute. |
+| **Parameters:** | **max_dim** | Integer indicating the maximal length of the allowed paths to be computed. |
 | **Returns:** | | A list of lists of strings, where each string is a vertex of the digraph and each list of vertices is an allowed path in the digraph. |
 
 #### &#x1F539; magnitude_differentials(max_dim = 3)
