@@ -13,7 +13,7 @@
 
 Computes (though not especially efficiently) the path homology, path homology boundary matrices and bases of the path chain complex of a digraph with respect to coefficients that are rational or a finite field.
 
-This code accompanies the paper: Matthew Burfitt and Tyrone Cutler, [Inductive construction of path homology chains](???).
+This code accompanies the paper: Matthew Burfitt and Tyrone Cutler, [Inductive construction of path homology chains](http://arxiv.org/abs/2411.09501).
 The original purpose of the code was to independently check the examples in Section 6 of the paper, which we also include as example python scrips.
 The algorithm is independent of the methods developed in the paper and based on a procedure outlaid in the paper: Alexander Grigor’yan, [Advances in path homology theory of digraphs](https://intlpress.com/site/pub/files/_fulltext/journals/iccm/2022/0010/0002/ICCM-2022-0010-0002-a007.pdf) Section 1.7.
 
@@ -24,7 +24,7 @@ The path homology of a digraph $`G`$ is computed in the following steps.
 
 1. Allowed paths consist of: vertices of $`G`$ in dimension $`0`$, edges of $`G`$ in dimension $`1`$ and are obtained in dimension $`n \geq 2`$ by concatenating any allowed paths in dimensions $`n-1`$ and an edge whose source vertex is the same as the final vertex in the $`(n-1)`$-path.
 
-2. A basis for the path chains $`C_*(G;K)`$ is obtained as the null space of the magnitude homology differential by identifying allowed paths with the basis of the diagonal magnitude chains (see Section 2.4 of [the accompanying paper](???)).
+2. A basis for the path chains $`C_*(G;K)`$ is obtained as the null space of the magnitude homology differential by identifying allowed paths with the basis of the diagonal magnitude chains (see Section 2.4 of [the accompanying paper](http://arxiv.org/abs/2411.09501)).
 
 3. The boundary matrix of the path homology differential  $`M(\partial_n)`$ is obtained on the computed basis of the path chains directly in terms of allowed paths and then transformed so that the image is given with respect to the path chain basis in dimension $`n-1`$.
 
@@ -158,7 +158,7 @@ plt.show()
       <img src="Euler2.png" alt="alt text" width="100%" height="100%">
 </p>
 
-The following example corresponds to Example 6.1 form the [the accompanying paper](???).
+The following example corresponds to Example 6.1 form the [the accompanying paper](http://arxiv.org/abs/2411.09501).
 With rational coefficients, the path boundary matrix of the digraph $`G`$ between dimension $`4`$ and dimension $`3`$ has entries of an arbitrary multiplicity $`t`$.
 Try changing the value of $`t`$ and or the coefficients!
 
@@ -209,7 +209,7 @@ plt.show()
       <img src="multiplicity.png" alt="alt text" width="100%" height="100%">
 </p>
 
-The final example corresponds to Example 6.2 form [the accompanying paper](???).
+The final example corresponds to Example 6.2 form [the accompanying paper](http://arxiv.org/abs/2411.09501).
 The digraph $`G`$ has path chain rank $`1`$ in dimension $`4`$ with coefficients $`Z/tZ`$ (t is set to 3 below) and path chain rank $`0`$ in dimension $`4`$ with coefficients $`Q`$ or $`Z/pZ`$ for $`p`$ a prime larger than $`2`$ and not equal to $`t`$.
 In particular, as the path chain ranks in other dimensions remain the same with all the coefficients above, the Euler characteristic changes depending on the coefficients.
 Try changing the value of $`t`$ and or the coefficients!
